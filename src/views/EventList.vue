@@ -10,6 +10,7 @@ import { defineComponent} from "vue";
 // @ is an alias to /src
 import EventCard from '@/components/EventCard.vue'
 import EventService from '@/services/EventService'
+import { EventItem } from '@/domains/types'
 
 export default defineComponent({
   // eslint-disable-next-line vue/multi-word-component-names
@@ -19,7 +20,7 @@ export default defineComponent({
   },
   data() {
     return {
-      events: null,
+      events: {} as EventItem[],
     }
   },
   created() {
